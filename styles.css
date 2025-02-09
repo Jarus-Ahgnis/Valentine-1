@@ -1,0 +1,148 @@
+/* General body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+}
+
+/* Smooth background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  text-align: center;
+  z-index: 1;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5em;
+  color: #d32f2f;
+}
+
+/* Buttons */
+.yes-button, .no-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* GIF */
+.gif_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Floating romantic words */
+.floating-message {
+  position: absolute;
+  font-size: 1.5em;
+  color: #ff4081;
+  font-weight: bold;
+  animation: floatUp 3s ease-in-out;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* Confetti effect */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: confettiFall 3s linear infinite;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Watermark */
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing text effect */
+@keyframes glowText {
+  from { text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 0, 0, 1); }
+}
+
+/* Yes page styling */
+.header_text {
+  font-size: 3em;
+  color: #d32f2f;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  animation: glowText 1.5s infinite alternate;
+}
+
+/* GIF container */
+.gif_container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(255, 182, 193, 0.8);
+}
+
+/* Floating love hearts */
+.love {
+  position: absolute;
+  font-size: 30px;
+  animation: floatLove 5s linear infinite;
+  opacity: 0.8;
+}
+
+/* Floating heart animation */
+@keyframes floatLove {
+  0% { transform: translateY(100vh) scale(1); }
+  50% { transform: translateY(-50vh) scale(1.2); }
+  100% { transform: translateY(-100vh) scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header_text { font-size: 2.5em; }
+  .love { font-size: 25px; }
+}
+
+@media (max-width: 480px) {
+  .header_text { font-size: 2em; }
+  .love { font-size: 20px; }
+}
